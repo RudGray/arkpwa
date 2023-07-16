@@ -1,0 +1,15 @@
+{
+    "name": "Arkpwa",
+    "short_name": "Arkpwa",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#000000",
+    "description": "Une simple PWA sans framework",
+    "icons": [{
+      "src": "hb-icon-icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }]
+  }
+  
