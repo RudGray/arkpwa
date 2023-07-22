@@ -6,8 +6,8 @@ const app = express();
 
 // Middleware
 app.use(cors({
-  origin: 'http://localhost:5000'
-  // origin: 'https://arkpwa.herokuapp.com'
+  // origin: 'http://localhost:5000'
+  origin: 'https://arkpwa.herokuapp.com'
 }));
 
 //Informe le server de la localisation des fichiers statiques
