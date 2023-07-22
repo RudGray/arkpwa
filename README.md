@@ -1,6 +1,7 @@
 # Sprints
 
 ## SPRINT 1
+- [ ] Créer une branche GIT de dev
 - [ ] Faire un test local dans un conteneur
 - [ ] Déployer
 
