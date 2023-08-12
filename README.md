@@ -17,7 +17,7 @@
 - [ ] Supprimer le compte
 
 ## SPRINT 4
-- [ ] Générer une pwa
+- [ ] Générer une pwa // avec la création d'une app react il est possible de générer automatiquement une PWA
 - [ ] Mettre à jour la pwa automatiquement
 
 ## SPRINT 5
