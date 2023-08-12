@@ -6,9 +6,16 @@ const app = express();
 
 // Middleware
 app.use(cors({
-  // origin: 'http://localhost:5000'
-  origin: 'https://arkpwa.herokuapp.com'
+  origin: function (origin, callback) {
+    const allowedOrigins = ['http://localhost:8080', 'https://arkpwa.herokuapp.com'];
+    if (!origin) return callback(null, true);
+    if (allowedOrigins.indexOf(origin) === -1) {
+      return callback(new Error('Origin not allowed by CORS'), false);
+    }
+    return callback(null, true);
+  }
 }));
+
 
 //Informe le server de la localisation des fichiers statiques
 app.use(express.static('public'));
@@ -68,7 +75,7 @@ app.get('/private/*', function(req, res, next) {
 
 
 
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 8080;
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });

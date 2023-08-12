@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
 <head>
     <title>Arkpwa</title>
@@ -15,4 +15,126 @@
     </main>
     <script src="index.js"></script>
 </body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Arkpwa</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="/style/styles.css">
+    <link rel="stylesheet" type="text/css" href="/style/graphic-charter.css">
+    <link rel="stylesheet" type="text/css" href="/style/index-animation.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parse/4.1.0/parse.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+</head>
+<body>
+
+<div class="header">
+    <h2>Mon titre</h2>
+    <button class="btn btn-primary" id="connexion">Connexion</button>
+</div>
+
+<div class="main">
+    <div id="tab1" class="tab-content">Contenu du tab 1</div>
+    <div id="tab2" class="tab-content">Contenu du tab 2</div>
+</div>
+
+<div class="footer">
+    <button class="tab-btn" data-target="#tab1">
+        <i class="fa fa-home"></i>
+        <span>Accueil</span>
+    </button>
+    <button class="tab-btn" data-target="#tab2">
+        <i class="fa fa-user"></i>
+        <span>Profil</span>
+    </button>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+<script src="index.js"></script>
+<script src="index-animation.js"></script>
+
+</body>
 </html>
+ -->
+ <!DOCTYPE html>
+ <html>
+ <head>
+     <title>Arkpwa</title>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="stylesheet" type="text/css" href="/style/styles.css">
+     <link rel="stylesheet" type="text/css" href="/style/graphic-charter.css">
+     <link rel="stylesheet" type="text/css" href="/style/index-animation2.css">
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/parse/2.19.0/parse.min.js"></script>
+
+    </head>
+    <body>
+        <style>
+           body {
+     display: grid;
+     grid-template-columns: 1fr 1fr;
+     grid-template-rows: 1fr 1fr;
+    }
+    
+    header {
+     grid-column: 1;
+     grid-row: 1;
+     height: 50px;
+     /* background-color: blue; */
+    }
+    
+    footer {
+     grid-column: 1;
+     grid-row: 2;
+     height: 50px;
+     /* background-color: red; */
+    }
+    
+    main {
+     /* grid-column: 1;
+     grid-row: 1; */
+     grid-column-span: 1;
+     grid-row-span: 2;
+    }
+        </style>
+        
+      <header class="grid-container">
+        <h1 class="grid-item">My Website</h1>
+        <a href="#" class="grid-item">Login</a>
+      </header>
+      <main class="grid-container">
+        <section class="content grid-item">
+          <h2>This is the main content section</h2>
+          <p>This is some text that is displayed in the main content section.</p>
+        </section>
+        <section class="content grid-item">
+          <h2>This is another content section</h2>
+          <p>This is some more text that is displayed in the main content section.</p>
+        </section>
+        <section class="content grid-item">
+          <h2>This is the third content section</h2>
+          <p>This is even more text that is displayed in the main content section.</p>
+        </section>
+      </main>
+      <footer class="grid-container">
+        <ul class="grid-item">
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+        </ul>
+      </footer>
+
+    
+
+ <script src="index.js"></script>
+ <script src="index-animation2.js"></script>
+ 
+ </body>
+ </html>
+ 
+ 
