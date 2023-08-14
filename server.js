@@ -5,22 +5,23 @@ const cors = require('cors');
 const app = express();
 
 // Middleware
-// app.use(cors({
-//   origin: function (origin, callback) {
-//     console.log('cors')
-//     console.log('origin', origin);
+app.use(cors({
+  origin: function (origin, callback) {
+    console.log('cors')
+    console.log('origin', origin);
 
-//     const allowedOrigins = ['http://localhost:8080', 'https://arkpwa.herokuapp.com'];
-//     if (!origin) return callback(null, true);
-//     if (allowedOrigins.indexOf(origin) === -1) {
-//       return callback(new Error('Origin not allowed by CORS'), false);
-//     }
-//     return callback(null, true);
-//   }
-// }));
+    const allowedOrigins = ['http://localhost:8080', 'https://arkpwa.herokuapp.com'];
+    if (!origin) return callback(null, true);
+    if (allowedOrigins.indexOf(origin) === -1) {
+      console.error(`Origin "${origin}" is not allowed by CORS.`);
+      return callback(new Error('Origin not allowed by CORS'), false);
+    }
+    return callback(null, true);
+  }
+}));
 
 // Paramètres CORS pour autoriser les requêtes depuis n'importe quelle origine en mode développement
-app.use(cors());
+// app.use(cors());
 
 
 //Informe le server de la localisation des fichiers statiques
