@@ -23,6 +23,13 @@ app.use(cors({
 // Paramètres CORS pour autoriser les requêtes depuis n'importe quelle origine en mode développement
 // app.use(cors());
 
+// Vérification des entêtes avec middleware
+app.use((req, res, next) => {
+  console.log('middleware');
+  console.log('req.headers.origin', req.headers.origin);
+  console.log('req.headers', req.headers);
+  next();
+});
 
 //Informe le server de la localisation des fichiers statiques
 app.use(express.static('public'));

@@ -1,0 +1,30 @@
+// cmd : tree arkpwa -I 'node_modules' > arkpwa/arbo.txt
+
+arkpwa
+├── Dockerfile
+├── README.md
+├── arbo.txt
+├── hb-icon-icon.png
+├── manifest.json
+├── package-lock.json
+├── package.json
+├── private
+├── public
+│   ├── app.js
+│   ├── connexion.html
+│   ├── home.html
+│   ├── index-animation.js
+│   ├── index-animation2.js
+│   ├── index.html
+│   ├── index.js
+│   └── style
+│       ├── graphic-charter.css
+│       ├── index-animation.css
+│       ├── index-animation2.css
+│       └── styles.css
+├── rudgray_fclassy_draw_of_a_developers_face_sit_on_classy_desk_e4b19a01-5176-4c49-8806-196c025c5a57.png
+├── server.js
+├── sw.js
+└── testParse.js
+
+3 directories, 22 files
