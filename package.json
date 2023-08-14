@@ -6,8 +6,8 @@
   "scripts": {
     "test": "jest",
     "parsetest": "node testParse.js",
-    "start": "node server.js",
-    "dev": "nodemon server.js"
+    "start": "node start.js",
+    "dev": "nodemon start.js"
   },
   "author": "",
   "license": "ISC",
@@ -20,6 +20,7 @@
   },
   "devDependencies": {
     "jest": "^29.6.2",
-    "nodemon": "^3.0.1"
+    "nodemon": "^3.0.1",
+    "supertest": "^6.3.3"
   }
 }

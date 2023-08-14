@@ -11,7 +11,8 @@ app.use(cors({
     console.log('origin', origin);
 
     const allowedOrigins = ['http://localhost:8080', 'https://arkpwa.herokuapp.com'];
-    if (!origin) return callback(new Error('Origin is undefined'), false);
+    // if (!origin) return callback(new Error('Origin is undefined'), false);
+    if (!origin) return callback(null, true);
     if (allowedOrigins.indexOf(origin) === -1) {
       console.error(`Origin "${origin}" is not allowed by CORS.`);
       return callback(new Error('Origin not allowed by CORS'), false);
@@ -79,7 +80,8 @@ app.get('/private/*', function(req, res, next) {
   }
 });
 
-const port = process.env.PORT || 8080;
-app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
-});
+// const port = process.env.PORT || 8080;
+// app.listen(port, () => {
+//   console.log(`Server is running on port ${port}`);
+// });
+module.exports = app;

@@ -1,25 +1,31 @@
-title {
-    font-family: 'Roboto', sans-serif;
-    font-size: 24px;
-    font-weight: 500;
-    color: green;
-    margin: 0;
-    padding: 0;
-}
-
-#form-container {
+body {
     display: grid;
-    grid-template-columns: 1fr;
-    grid-gap: 20px;
-    /* ...plus de styles si nécessaire... */
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+header {
+    grid-column: 1;
+    grid-row: 1;
+    height: 50px;
+    /* background-color: blue; */
+}
+
+footer {
+    grid-column: 1;
+    grid-row: 2;
+    height: 50px;
+    /* background-color: red; */
+}
+
+main {
+    /* grid-column: 1;
+    grid-row: 1; */
+    grid-column-span: 1;
+    grid-row-span: 2;
 }
 
 
-.hidden {
-    display: none;
-}
 
-/* Éventuellement, vous pouvez également styliser les formulaires individuellement, si nécessaire. */
-#login-form, #register-form {
-    /* ...styles pour les formulaires... */
-}
+
+

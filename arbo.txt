@@ -1,6 +1,6 @@
-// cmd : tree arkpwa -I 'node_modules' > arkpwa/arbo.txt
+tree ./ -I 'node_modules' > ./arbo.txt
 
-arkpwa
+./
 ├── Dockerfile
 ├── README.md
 ├── arbo.txt
@@ -24,7 +24,11 @@ arkpwa
 │       └── styles.css
 ├── rudgray_fclassy_draw_of_a_developers_face_sit_on_classy_desk_e4b19a01-5176-4c49-8806-196c025c5a57.png
 ├── server.js
+├── serverInit.js
+├── specs
+│   ├── app.spec.js
+│   └── jest.config.js
 ├── sw.js
 └── testParse.js
 
-3 directories, 22 files
+4 directories, 25 files
