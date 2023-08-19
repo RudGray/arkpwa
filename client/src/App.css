@@ -1,0 +1,21 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 colonnes de taille égale */
+  gap: 1rem; /* Espace entre les éléments du grid */
+}
+
+.grid-item {
+  align-self: center; /* Centrer les éléments verticalement */
+  justify-self: center; /* Centrer les éléments horizontalement */
+}
+
+.content {
+  padding: 1rem;
+  border: 1px solid #e0e0e0; /* Juste pour visualiser la section, à enlever si non désiré */
+}
+
+/* Styles pour le logo, si nécessaire */
+.grid-item img {
+  height: 50px;
+  width: auto;
+}

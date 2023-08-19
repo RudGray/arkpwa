@@ -1,3 +1,15 @@
+# Commandes
+
+## dev local
+npm run dev
+
+## test 
+npm run test
+
+## 
+
+
+
 # Sprints
 
 ## SPRINT 1

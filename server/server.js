@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 const Parse = require('parse/node');
 const cors = require('cors');
+const { createProxyMiddleware } = require('http-proxy-middleware');
 const app = express();
 
 // Middleware CORS
@@ -9,8 +10,10 @@ app.use(cors({
   origin: function (origin, callback) {
     console.log('cors')
     console.log('origin', origin);
-
-    const allowedOrigins = ['http://localhost:8080', 'https://arkpwa.herokuapp.com'];
+    // const allowedOrigins = ['http://localhost:8080', 'https://arkpwa.herokuapp.com'];
+    const allowedOrigins = process.env.NODE_ENV === 'development' 
+    ? ['http://localhost:3000'] 
+    : ['https://arkpwa.herokuapp.com'];
     // if (!origin) return callback(new Error('Origin is undefined'), false);
     if (!origin) return callback(null, true);
     if (allowedOrigins.indexOf(origin) === -1) {
@@ -22,27 +25,36 @@ app.use(cors({
 }));
 
 // Vérification des entêtes avec middleware
-app.use((req, res, next) => {
-  console.log('middleware');
-  console.log('req.headers.origin', req.headers.origin);
-  console.log('req.headers', req.headers);
-  next();
-});
+// app.use((req, res, next) => {
+//   console.log('middleware');
+//   console.log('req.headers.origin', req.headers.origin);
+//   console.log('req.headers', req.headers);
+//   next();
+// });
 
 // Route principale
-app.get('/', (req, res) => {
-  console.log("route /");
-  console.log(__dirname);
-  res.sendFile(__dirname + '/public/index.html');
-});
+// app.get('/', (req, res) => {
+//   console.log("route /");
+//   console.log(__dirname);
+//   res.sendFile(__dirname + '/public/index.html');
+// });
 
 // Serveur de fichiers statiques
-app.use(express.static('public'));
-app.use('/private', express.static(path.join(__dirname, 'private')));
-app.use('/style', express.static('style'));
+// Si en mode développement, créez un proxy pour rediriger toutes les requêtes non traitées vers le serveur de développement React
+if (process.env.NODE_ENV === 'DEV') {
+  app.use('/', createProxyMiddleware({ target: 'http://localhost:3000', changeOrigin: true }));
+} else {
+  // en mode production, servez le build de React
+  app.use(express.static(path.join(__dirname, '../client/build')));
+
+  app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, '../client/build/index.html'));
+  });
+}
+
 
 // Configuration de Parse
-Parse.serverURL = 'https://parseapi.back4app.com';
+// Parse.serverURL = 'https://parseapi.back4app.com';
 
 Parse.initialize(
   process.env.PARSE_APPLICATION_ID,
