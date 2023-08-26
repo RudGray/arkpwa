@@ -1,15 +1,9 @@
--I 'node_modules|client/node_modules|client/README.md' > ./arbo.txt
-
-./
+.
 ├── Dockerfile
 ├── README.md
 ├── arbo.txt
-├── assets
-│   ├── hb-icon-icon.png
-│   └── rudgray_fclassy_draw_of_a_developers_face_sit_on_classy_desk_e4b19a01-5176-4c49-8806-196c025c5a57.png
 ├── client
 │   ├── README.md
-│   ├── client_arbo.txt
 │   ├── package-lock.json
 │   ├── package.json
 │   ├── public
@@ -23,34 +17,27 @@
 │       ├── App.css
 │       ├── App.js
 │       ├── App.test.js
+│       ├── assets
+│       │   ├── hb-icon-icon.png
+│       │   └── rudgray_fclassy_draw_of_a_developers_face_sit_on_classy_desk_e4b19a01-5176-4c49-8806-196c025c5a57.png
+│       ├── graphic-charter.css
 │       ├── index.css
 │       ├── index.js
 │       ├── logo.svg
 │       ├── reportWebVitals.js
-│       └── setupTests.js
-├── manifest.json
+│       ├── setupTests.js
+│       ├── sw.js
+│       └── utils
 ├── package-lock.json
 ├── package.json
 ├── server
-│   ├── public
-│   │   ├── app.js
-│   │   ├── connexion.html
-│   │   ├── home.html
-│   │   ├── index-animation.js
-│   │   ├── index-animation2.js
-│   │   ├── index.html
-│   │   ├── index.js
-│   │   └── style
-│   │       ├── graphic-charter.css
-│   │       ├── index-animation.css
-│   │       ├── index-animation2.css
-│   │       └── styles.css
 │   ├── server.js
 │   ├── specs
-│   │   ├── app.spec.js
-│   │   └── jest.config.js
+│   │   ├── jest.config.js
+│   │   └── server.spec.js
 │   └── start.js
-├── sw.js
 └── testParse.js
 
-8 directories, 43 files
+7 directories, 31 files
+
+tree -I 'node_modules|client/node_modules|client/README.md' > ./arbo.txt

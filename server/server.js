@@ -1,5 +1,9 @@
-const express = require('express');
 const path = require('path');
+// require('dotenv').config({ path: './config.env' });
+// require('dotenv').config();
+require('dotenv').config({ path: path.join(__dirname, '.env') });
+
+const express = require('express');
 const Parse = require('parse/node');
 const cors = require('cors');
 const { createProxyMiddleware } = require('http-proxy-middleware');
@@ -30,13 +34,6 @@ app.use(cors({
 //   console.log('req.headers.origin', req.headers.origin);
 //   console.log('req.headers', req.headers);
 //   next();
-// });
-
-// Route principale
-// app.get('/', (req, res) => {
-//   console.log("route /");
-//   console.log(__dirname);
-//   res.sendFile(__dirname + '/public/index.html');
 // });
 
 // Serveur de fichiers statiques

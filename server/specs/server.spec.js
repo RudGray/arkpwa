@@ -1,6 +1,5 @@
 const request = require('supertest');
-//const express = require('express');
-const app = require('../server');  // Remplacez par le chemin vers votre fichier serveur
+const app = require('../server.js');  // Remplacez par le chemin vers votre fichier serveur
 
 describe('Server Routes', () => {
     describe('GET /', () => {
